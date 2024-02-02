@@ -1,0 +1,189 @@
+@font-face {
+    font-family:"Poppins-Medium" ;
+    src: url("./font/Poppins-Medium.ttf") format("TrueType");
+}
+html{
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    border: inherit;
+    outline: inherit;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins-Medium";
+    box-sizing: inherit;
+}
+body{
+    font-family: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2EFE5;
+}
+.container{
+    flex-basis: 80%;
+    margin-top: 3rem;
+    padding: 2rem;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title h1{
+    font-size: 3rem;
+}
+.title-input , .input{
+    display: block;
+}
+.title-input{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+.input{
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 0.5rem 0;
+}
+.input:focus{
+    box-shadow: 1px 1px 10px #1E88E5;
+}
+.todo-btns{
+    margin: 1rem 0;
+}
+.add-todo , .clear-todo{
+    width: 10rem;
+    /* background-color: red; */
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.add-todo{
+    background-color: #438ccb;
+}
+.clear-todo{
+    background-color: #D75456;
+}
+.todos{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-top: 1rem;
+}
+.todos h2{
+    font-size: 2rem;
+}
+.todo-wrapper{
+    width: 95%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.todo-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding:  1rem;
+    box-shadow: 1px 1px 10px #B4B4B8;
+    margin: 1rem 0;
+}
+.todo-name{
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+.uncomplete p{
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-decoration: line-through;
+    color: #afa77a;
+}
+.control-todo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.complete-todo , .delete-todo{
+    width: 8rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: normal;
+    cursor: pointer;
+}
+.complete-todo{
+    background-color: #5AB55B;
+}
+.delete-todo{
+    background-color: #D95545;
+}
+@media only screen and (max-width: 1200px){
+
+}
+@media only screen and (max-width: 768px){
+    .title h1{
+    font-size: 2rem;
+    }
+    .todos h2{
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width:720px){
+    .control-todo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    .add-todo , .clear-todo{
+        display: block;
+        width: 100%;
+    }
+    .clear-todo{
+        margin-top: 1rem;
+    }
+}
+@media only screen and (max-width: 576px){
+    .todo-wrapper{
+        width: 100%;
+    }
+    .todo-item{
+        flex-direction: column;
+    }
+    .complete-todo , .delete-todo{
+        width: 300px;
+    }
+    .complete-todo{
+        margin-top: 1rem;
+    }
+}
+@media only screen and (max-width: 350px){
+    .title h1{
+        font-size: 1.5rem;
+    }
+    .title-input{
+        font-size: 1rem;
+    }
+    .todos h2{
+        font-size: 1rem;
+    }
+    .complete-todo , .delete-todo{
+        width: 120px;
+    }
+    .todo-wrapper{
+        width: 90%;
+    }
+}
