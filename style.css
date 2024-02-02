@@ -129,6 +129,7 @@ body{
 .delete-todo{
     background-color: #D95545;
 }
+/* Responsive */
 @media only screen and (max-width: 1200px){
 
 }

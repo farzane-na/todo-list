@@ -17,9 +17,9 @@ function addTodo(){
         complete:false
     }
     
-    todosArray.push(newTodoObj)
-    setLocalStorage(todosArray)
-    todoGeneratore(todosArray)
+    todosArray.push(newTodoObj);
+    setLocalStorage(todosArray);
+    todoGeneratore(todosArray);
     input.value="";
     input.focus();
 }
@@ -75,17 +75,17 @@ function deleteTodoHandeler(){
     localStorage.removeItem("todo status");
 }
 function setLocalStorage(todosList){
-    localStorage.setItem("todo status",JSON.stringify(todosList))
-}
+    localStorage.setItem("todo status",JSON.stringify(todosList));
+};
 function getLocalSorage(){
-    let localStorageTodos=JSON.parse(localStorage.getItem("todo status"))
+    let localStorageTodos=JSON.parse(localStorage.getItem("todo status"));
     if(localStorageTodos){
         todosArray=localStorageTodos;
     }else{
         todosArray=[];
     }
-    todoGeneratore(todosArray)
-}
+    todoGeneratore(todosArray);
+};
 function removeTodoHandeler(todoId){
     let localStorageTodo=JSON.parse(localStorage.getItem("todo status"));
     todosArray=localStorageTodo;
@@ -95,7 +95,7 @@ function removeTodoHandeler(todoId){
     todosArray.splice(mainTodoIndex,1);
     setLocalStorage(todosArray);
     todoGeneratore(todosArray);
-}
+};
 function completeTodoHandeler(todoId){
     let localStorageTodo=JSON.parse(localStorage.getItem("todo status"));
     todosArray=localStorageTodo;
@@ -106,10 +106,10 @@ function completeTodoHandeler(todoId){
     });
     setLocalStorage(todosArray);
     todoGeneratore(todosArray);
-}
+};
 //////////////////// Events ////////////////////
 
 input.addEventListener("keyup",enterTodoHandeler);
 addBtn.addEventListener("click",addTodo);
 deleteBtn.addEventListener("click",deleteTodoHandeler);
-window.addEventListener("load",getLocalSorage)
+window.addEventListener("load",getLocalSorage);
